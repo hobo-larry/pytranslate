@@ -2,7 +2,7 @@ import fitz  # PyMuPDF
 from deep_translator import GoogleTranslator
 
 # Load the PDF
-doc = fitz.open("curriculo-denise.pdf")
+doc = fitz.open("pdf-location")
 
 # Create a new PDF to store translated content
 new_doc = fitz.open()
@@ -19,5 +19,5 @@ for page in doc:
     new_page.insert_text((72, 72), translated, fontsize=10)
 
 # Save the translated PDF
-new_doc.save("curriculo-denise-fr.pdf")
+new_doc.save("savedpdfname")
 
